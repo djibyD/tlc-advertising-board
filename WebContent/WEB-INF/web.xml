@@ -11,4 +11,18 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+
+    <servlet-name>MainServlet</servlet-name>
+
+    <servlet-class>servlet.MainSerlvet</servlet-class>
+</servlet>
+<servlet-mapping>
+
+    <servlet-name>MainServlet</servlet-name>
+
+    <url-pattern>/board</url-pattern>
+
+</servlet-mapping>
 </web-app>

@@ -5,18 +5,58 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   
+  <properties>
+        <appengine.app.version>1</appengine.app.version>
+        <appengine.sdk.version>1.9.48</appengine.sdk.version>
+
+        <objectify.version>5.1.5</objectify.version>
+        <guava.version>18.0</guava.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <prerequisites>
+        <maven>3.3.9</maven>
+    </prerequisites>
+  
   <dependencies>
   	<dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>3.0.1</version>
-            <scope>provided</scope>
-        </dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.1.0</version>
+</dependency>
         <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+        
+        <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+          <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>com.googlecode.objectify</groupId>
+          <artifactId>objectify</artifactId>
+          <version>${objectify.version}</version>
+        </dependency>
+<!-- [END Objectify_Dependencies] -->
+
+        <!-- Test Dependencies -->
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-testing</artifactId>
+            <version>${appengine.sdk.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-stubs</artifactId>
+            <version>${appengine.sdk.version}</version>
+            <scope>test</scope>
+        </dependency>
+        
   </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
