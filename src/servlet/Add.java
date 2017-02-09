@@ -7,7 +7,7 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
 @Entity
-public class Adds {
+public class Add {
 
 	//@Parent Key<Adds> adds;
 	@Id public Long id;
@@ -19,14 +19,14 @@ public class Adds {
 	/**
 	 * Simple constructor
 	 **/
-	public Adds() {
+	public Add() {
 
 	}
 
 	/**
 	 * constructor with parameters
 	 **/
-	public Adds(String title, String price, Date date) {
+	public Add(String title, String price, Date date) {
 		this.title=title;
 		this.price= price;
 		this.date=date;
